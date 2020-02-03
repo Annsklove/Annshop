@@ -1,0 +1,82 @@
+.product-page {
+    background-color: $bgColorGrey;
+    padding: 60px 0 75px;
+}
+
+.good-box{
+    background-color: $colorWhite;
+    border: 1px solid $colorLightGrey;
+    padding: 30px 30px 55px;
+
+    &__title-good {
+        @include mainFont ($size: 22px, $lineHt: 20px, $color: $colorDarkGrey);
+        margin-bottom: 20px;
+    }
+    &__desc-good{
+        margin-bottom: 19px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #ebebeb;
+        p {
+            @include mainFont ($size: 14px, $lineHt: 26px);
+        }
+    }
+
+    .price {
+        &__old, &__current {
+            font-size: 20px;
+        }
+    }
+
+    .nav-tabs {
+        .active {
+            color: $colorGrey;
+        }
+        &__item {
+            @include mainFont ($size: 20px, $lineHt: 44px, $color: lighten($colorGrey, 25%),$fWeight: 500);
+            margin-right: 35px;
+            display: inline-block;
+            &:hover {
+                @include aHover ($hoverColor: $colorGrey);
+            }
+        }
+    }
+}
+
+.specific {
+    &__title {
+        @include mainFont ($size: 18px, $lineHt: 24px, $fWeight: 500);
+        margin-bottom: 10px;
+    }
+    &__table {
+        margin-bottom: 30px;
+        width: 100%;
+        border-top: 1px solid $colorLightGrey;
+        tr {
+            border-bottom: 1px solid $colorLightGrey;
+        }
+        td {
+            padding: 6px 15px;
+            &:first-child {
+                border-right: 1px solid #ddd;
+                width: 30%;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.reviews {
+    &__title{
+        @include mainFont ($size: 18px, $lineHt: 24px, $fWeight: 500);
+        margin-bottom: 10px;
+    }
+    &__descr {
+        font-style: italic;
+    }
+
+    .reviews-form {
+        margin-top: 20px;
+        @include formDefoult ();
+    }
+}
+

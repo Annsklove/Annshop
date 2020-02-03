@@ -1,0 +1,134 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* HEADER START */
+
+.header-top {
+    border-bottom: 1px solid $colorLightGrey;
+    min-height: 52px;
+
+    &__contact {
+        display: inline-block;
+        position: relative;
+        &:nth-child(1) {
+            margin-right: 40px;
+        }
+        a {
+            @include mainFont ($lineHt: 30px, $color: $colorDarkGrey);
+            @include aHover ();
+            &:before {
+                content: "";
+                width: 1px;
+                background-color: $colorLightGrey;
+                @include pAbsolute ($p-l: -16px, $p-t: 5%);
+                display: inline-block;
+                margin-right: 5px;
+                height: 90%;
+            }
+        }
+    }
+}
+
+.header-main {
+    padding: 26px 0;
+
+    .navbar {
+        .navbar-toggler {
+            @include borderBox (2px, $colorDarkGrey);
+            .navbar-toggler-icon {
+                background-image: url(../img/toggler.svg);
+            }
+        }
+        .nav-item {
+            margin-right: 1rem;
+            .nav-link {
+                @include mainFont ($color: $colorDarkGrey, $fWeight: 500);
+                text-transform: uppercase;
+                position: relative;
+                padding: 0 4px 4px;
+                margin: 0 6px;
+                &:hover {
+                    @include lineBefore ();
+                }
+            }
+            .dropdown-item{
+                @include mainFont ($color: $colorDarkGrey, $fWeight: 300);
+                outline: none;
+                &:hover {
+                    background-color: inherit;
+                    color: $colorDarkRed;
+                }
+            }
+        }
+        .active .nav-link {
+            @include mainFont ($color: $colorDarkGrey, $fWeight: 500);
+            @include lineBefore ();
+        }
+    }
+
+    .header-action {
+        div {
+            a {
+                @include iconBorder ($iconH: 50px, $iconW: 50px, $brdRad: $per100, $brdW: 2px, $brdColor: $colorLightGrey);
+                @include mainFont ($size: 16px, $lineHt: 46px, $fWeight: 400);
+                @include aHover ();
+            }
+            &:nth-child(1) {
+                margin-right: 16px;
+            }
+        }
+        @media screen and (max-width: 420px) {
+            width: $per100;
+        }
+    }
+}
+
+.header-bottom{
+    
+    @media screen and (min-width: 991px) {
+        &__colimn-1 {
+            flex: 0 0 21%;
+            max-width: 21%;
+        }
+        &__colimn-2 {
+            flex: 0 0 56%;
+            max-width: 56%;
+        }
+        &__colimn-3 {
+            flex: 0 0 23%;
+            max-width: 23%;
+        }
+    }
+
+    &__btn-categories {
+        margin-bottom: 20px;
+        text-align: left;
+        box-shadow: none;
+        outline: none;
+        border: none;
+            &:after {
+                @include btnAfter (18px, 18px);
+                background-image: url("../img/menu-button.svg");
+                border: none;
+        }
+    }
+    &__menu {
+        top: 20px!important;
+        border: 2px solid #c40316;
+        padding: 0;
+    }
+    &__item{
+        @include mainFont ($lineHt: 45px, $color: $colorDarkGrey, $fWeight: 300);
+        padding: 0 20px 0 30px;
+        @include aHover ();
+        @include focusBgOpBr ($clr: $colorDarkRed);
+    }
+    &__input-search {
+        @media screen and (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__btn-discounts {
+        @media screen and (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.catalog_page {
+    .product-demo {
+        flex-basis: 25%;
+        @include flexMedia ($flexBasis: 100%);
+        margin-bottom: 25px;
+        &__thumb {
+            height: 250px;
+        }
+    }
+}
+
+.product-demo {
+    @include borderBox ($brdRadius: 4px, $brdColor: $colorLightGrey);
+    border-right: none;
+    background: $colorWhite;
+    position: relative;
+    flex-basis: 20%;
+    @include flexMedia ($flexBasis: 100%);
+    z-index: 1;
+
+    &__content {
+        padding: 20px 16px 25px 16px;
+        text-align: center;
+    }
+    &__thumb {
+        position: relative;
+        height: 290px;
+        text-align: center;
+        background-color: $colorWhite;
+        img {
+            max-height: 100%;
+        }
+    }
+    &:hover{
+        z-index: 3;
+        box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.07);
+        .product-demo__btn-basket,
+        .product-demo__action-links {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    h4 {
+        margin-bottom: 10px;
+        a {
+            @include mainFont ($color: $colorBlue);
+            @include aHover ();
+        }
+    }
+    &__action-links {
+        @include pAbsolute ($p-l: 0, $p-r: 0, $p-b: 10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        text-align: center;
+        li {
+            display: inline-block;
+            a {
+                display: block;
+            }
+        }
+    }
+    &__btn-basket {
+        @include pAbsolute ($p-l: 0, $p-r: 0, $p-b: -61px);
+        border-top: none;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+        padding: 20px 10px 25px;
+        text-align: center;
+        visibility: hidden;
+        background: $colorWhite;
+        opacity: 0;
+        @include transition ($trans: 0.6s)
+    }
+
+    @media screen and (max-width: 991px) {
+        &__thumb {
+            text-align: center;
+            position: relative;
+        }
+    }
+
+    &__label {
+        text-transform: capitalize;
+        top: 15px;
+        right: 15px;
+        @include iconBorder (40px, 40px, 50%, 0px, $brdColor: inherit, $bgColor: inherit);
+        @include mainFont ($size: 10px, $lineHt: 40px, $color: $colorWhite, $fWeight: 300);
+        position: absolute;
+        text-align: center;
+        display: block;
+    }
+    &__label--sale{
+        background-color: $colorGreen;
+    }
+    &__label--new{
+        background-color: $colorNew;
+    }
+}

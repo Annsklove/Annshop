@@ -1,0 +1,74 @@
+
+.footer-letter-us {
+    &__box {
+        margin-top: -73px;
+        padding: 45px 35px;
+        background: $colorWhite;
+        @include borderBox ($brdColor: $colorLightGrey);
+    }
+}
+
+.footer-main{
+    padding: 55px 0 56px;
+    border-bottom: solid 1px $colorLightGrey;
+
+    a {
+        @include mainFont ();
+        @include aHover ($hoverColor: $colorDarkRed)
+    }
+
+    &__title-h3{
+        @include mainFont ($lineHt: 16px, $color: $colorGrey, $fWeight: 500);
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 11px;
+        @include lineBefore ($bgColor: $colorDarkRed, $lineH: 3px,  $widthLine: 40px)
+    }
+    &__app-content {
+        margin-bottom: 25px;
+    }
+    &__menu {
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    &__contact-icone{
+        margin-right: 12px;
+    }
+    &__contact{
+        margin-bottom: 16px;
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    &__social-links{
+        li {
+            display: inline-block;
+            a {
+                @include iconBorder ($iconH: 42px, $iconW: 42px, $brdRad: 4px, $brdW: 0);
+                @include mainFont ($size: 16px, $lineHt: 42px, $color: $colorWhite, $fWeight: 500);
+                @include transition ();
+                &:hover{
+                    color: $colorWhite;
+                    background: $colorDarkRed !important;
+                }
+            }
+            a.facebook { background: #3b5998; }
+            a.twitter { background: #00aced; }
+            a.instagram { background: #bc2a8d; }
+            a.linkedin { background: #007bb6; }
+            a.rss { background: #f26522; }
+        }
+    }
+    @media screen and (max-width: 576px) {
+        &__social-links {
+            text-align: center;
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 30px 0;
+}

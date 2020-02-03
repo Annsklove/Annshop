@@ -1,0 +1,466 @@
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    @include mainFont ();
+}
+h3 {
+    @include mainFont ($size: $fontSize--h3, $fWeight: 500, $color: $colorDarkGrey);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.red-text {
+    color: $colorDarkRed !important;
+}
+.mb-site {
+    margin-bottom: $mp-site;
+}
+
+.dropdown-item{
+    @include mainFont ();
+}
+
+.btnRed {
+    @include btnBasis ($btnBgColor: $colorDarkRed, $btnFontS: 13px);
+}
+.btnGrey {
+    @include btnBasis ($btnBgColor: $colorGrey);
+    &:hover{
+        background-color: $colorDarkRed;
+    }
+}
+.btnLightGrey {
+    @include btnBasis ($btnColor: $colorDarkGrey, $btnBgColor: $colorLightGrey);
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.btnWhite {
+    @include btnBasis ($btnBgColor: $colorWhite, $btnColor: $colorDarkGrey, $btnLineH: 41px, $btnH: 41px, $btnFontS: 15px);
+    border: 2px solid $colorLightGrey;
+    &:hover{
+        background-color: $colorDarkRed;
+        color: $colorWhite;
+        border-color: $colorDarkRed;
+    }
+}
+.btnIcon {
+    @include btnBasis ($btnBgColor: $colorWhite, $btnColor: $colorDarkGrey, $btnLineH: 39px, $btnW: 46px, $btnH: 43px, $btnFontS: 18px);
+    border: 2px solid $colorLightGrey;
+    padding: 0;
+    &:hover{
+        background-color: $colorDarkRed;
+        color: $colorWhite;
+        border-color: $colorDarkRed;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.input-group {
+    .form-control {
+        border: solid 1px $colorLightGrey;
+        height: 52px;
+        @include mainFont ($fWeight: 300);
+        &::placeholder {
+            color: liten($colorGrey, 15%);
+        }
+        &:focus {
+            box-shadow: none;
+            border-color: darken($colorLightGrey, $amount: 6%);
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.grey_section {
+    background-color: $bgColorGrey;
+    padding-top: $mp-site;
+    padding-bottom: 130px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Убрать и сделать лучше через модификаторы (см best-offers__title ) */
+.title_section {
+    h2{
+        @include mainFont ($size: $fontSize--h2, $fWeight: 500, $color: $colorDarkGrey);
+        @include lineBefore ($colorDarkRed, $lineH: 3px);
+        position: relative;
+        text-transform: capitalize;
+        padding-bottom: 7px;
+        display: inline-block;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* SLIDER START */
+.slick {
+    &__slide {
+        outline: none;
+        @include bgImage ($bgHeight: 510px);
+    }
+    &--one {
+        background-image: url(../img/slider17.jpg);
+    }
+    &--two {
+        background-image: url(../img/slider18.jpg);
+    }
+    &--three {
+        background-image: url(../img/slider9.jpg);
+    }
+    &--four {
+        background-image: url(../img/slider6.jpg);
+    }
+
+    &__content {
+        h3 {
+            @include mainFont ($lineHt: 22px, $color: $colorDarkRed, $fWeight: 500);
+        }
+        h1{
+            @include mainFont ($lineHt: 42px, $size: $fontSize--h1);
+            text-transform: capitalize;
+        }
+        p {
+            @include mainFont ($size: 18px, $fWeight: 500);
+            text-transform: capitalize;
+            margin: 38px 0 44px;
+            span {
+                color: $colorDarkRed;
+            }
+        }
+        &--whiteText {
+            h1, p, h3 {
+                color: $colorWhite;
+            }
+            span {
+                color: $colorYellow;
+            }
+        }
+    }
+
+    .action {
+        display: block;
+        text-align: center;
+        border-left: 1px solid $colorLightGrey;
+        border-bottom: 1px solid $colorLightGrey;
+
+        &__box{
+            border-right: 1px solid $colorLightGrey;
+            position: relative;
+            &:hover {
+                @include lineBefore ($colorDarkRed);
+            }
+            a {
+                display: inline-block;
+                padding: 16px 42px;
+                @include mainFont ($fWeight: 300);
+                text-decoration: none;
+                @include transition ();
+                @include aHover ();
+            }
+
+            &--active{
+                @include lineBefore ($colorDarkRed);
+                position: relative;
+                a {
+                    color: $colorDarkRed;
+                }
+            }
+        }
+    }
+}
+/* SLIDER END */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Advantages START */
+
+.advant {
+    border: 1px solid $colorLightGrey;
+    &__one{
+        flex-basis:20%;
+        padding: 25px 10px 25px 20px;
+        border-right: 1px solid $colorLightGrey;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &__icone {
+        float: left;
+        height: 100%;
+        margin-right: 15px;
+    }
+    &__content{
+        h4 {
+            @include mainFont ($lineHt: 18px, $fWeight: 500);
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__icone {
+            height: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        &__one {
+            flex-basis:50%;
+        }
+        &__icone {
+            float: inherit;
+        }
+    }
+}
+
+
+/* Advantages END */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Catalog START */
+.demo-catalog {
+    &__position {
+        flex-basis: 20%;
+        @include flexMedia ();
+        background-color: $colorWhite;
+        align-items: center;
+        display: flex;
+        padding: 7px 10px;
+        justify-content: space-between;
+        border-bottom: 1px solid $colorLightGrey;
+        border-right: 1px solid $colorLightGrey;
+        @include transition ($trans: 0.6s);
+
+        &:hover {
+            @include transition ($trans: 0.6s);
+            z-index: 2;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+        }
+        a {
+            @include mainFont ($lineHt: inherit, $fWeight: 500);
+            @include aHover ();
+        }
+        @media screen and (max-width: 991px) {
+            flex-basis: 50%;
+        }
+        @media screen and (max-width: 576px) {
+            flex-basis: 100%;
+        }
+    }
+    &__content {
+        flex-basis: 60%;
+        @include flexMedia ();
+        padding: 10px;
+    }
+    &__thumb {
+        a {
+            display: inline-block;
+        }
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.best-offers {
+    .product-box {
+        flex-basis: 50%;
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.bestsellers-products {
+    .product-box-section {
+        flex-basis: 33.333%;
+        @include flexMedia ($flexBasis: auto);
+        @media screen and (max-width: 576px) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.products-offer {
+ border-right: solid 1px $colorLightGrey;
+}
+
+.product-box-all {
+    border-right: solid 1px $colorLightGrey;
+    border-top: solid 1px $colorLightGrey;
+}
+.product-box {
+    background: $colorWhite;
+    @include borderBox ($brdRadius: 0px, $brdColor: $colorLightGrey, $brdWidth: 1px);
+    border-right: none;
+    border-top: none;
+    &__thumb {
+        float: left;
+        width: 43%;
+    }
+    &__content {
+        padding: 20px 15px;
+        h4 {
+            margin-bottom: 10px;
+            a {
+                @include mainFont ($color: $colorBlue);
+                @include aHover ();
+            }
+        }
+        .price {
+            margin-bottom: 8px;
+        }
+    }
+    &__text {
+        margin-bottom: 8px;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.tabs-head {
+    margin-bottom: 30px;
+    &__title {
+        h2 {
+            @include mainFont ($size: $fontSize--h2, $lineHt: 28px, $fWeight: 500, $color: $colorDarkGrey);
+            @include lineBefore ($colorDarkRed, $lineH: 3px);
+            position: relative;
+            text-transform: capitalize;
+            padding-bottom: 7px;
+            display: inline-block;
+        }
+    }
+    &__tabs {
+        .nav{
+            height: 30px;
+        }
+        li {
+            margin-right: 35px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__link {
+        @include mainFont ($lineHt: inherit);
+        @include aHover ();
+        &.active {
+            color: $colorDarkRed;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.offer-timing {
+    &__single {
+        text-align: center;
+        margin-right: 6px;
+    }
+    &__number {
+        @include mainFont ($size: 15px, $fWeight: 500, $lineHt: 46px);
+        width: 46px;
+        height: 46px;
+        background: $bgColorGrey;
+        text-align: center;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.price {
+    &__old {
+        text-decoration: line-through;
+        margin-right: 6px;
+        font-weight: 300;
+    }
+    &__current {
+        @include mainFont ($size: 16px, $fWeight: 500, $color: $colorDarkRed);
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Promo Banner START*/
+/* СДЕЛАТЬ УСЛОВИЕ!!!!!! */
+// Когда 3 баннера и когда 1 баннер!
+// !!!!!!!!!!!!!!!!!!!!!!!
+.promo-banners {
+    &__banner {
+        flex-basis: calc(28% - 15px);
+        @include flexMedia ($flexBasis: 100%);
+        &--big{
+            flex-basis: calc(44% - 15px);
+            @include flexMedia ($flexBasis: 100%);
+        }
+        height: 200px;
+        a {
+            display: inline-block;
+            width: $per100;
+            height: $per100;
+        }
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: auto;
+            @include transition ();
+        }
+        &--bannerW100 {
+            height: 240px;
+            img{
+                height: auto;
+                width: 100%;
+            }
+        }
+        &:hover img {
+            transform: scale(1.05);
+        }
+        @media screen and (max-width: 768px) {
+            height: auto;
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    z-index: 10;
+    top: 46%;
+    transform: translatey(-50%);
+    @include mainFont ($size: 32px, $lineHt: 40px, $color: $colorGrey, $fWeight: 500);
+    @include iconBorder ($iconH: 50px, $iconW: 50px, $brdColor: $colorLightGrey, $bgColor: $colorWhite);
+    @include transition ();
+    opacity: 0.7;
+    outline: none;
+    position: absolute;
+    &:hover{
+        opacity: 1;
+        border-color: $colorDarkRed;
+        background: $colorDarkRed;
+        color: $colorWhite;
+    }
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 0px;
+}
+.owl-carousel .owl-nav button.owl-next {
+    right: 0px;
+    left: auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.rating-star {
+    li { margin-right: 3px; }
+    a { color: $colorDarkYellow; }
+}

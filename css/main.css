@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubiklight.woff2");
+  src: url("../fonts/Rubiklight.woff") format("woff"), url("../fonts/Rubiklight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubik.woff2");
+  src: url("../fonts/Rubik.woff") format("woff"), url("../fonts/Rubik.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubikmedium.woff2");
+  src: url("../fonts/Rubikmedium.woff") format("woff"), url("../fonts/Rubikmedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubikbold.woff2");
+  src: url("../fonts/Rubikbold.woff") format("woff"), url("../fonts/Rubikbold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubikblack.woff2");
+  src: url("../fonts/Rubikblack.woff") format("woff"), url("../fonts/Rubikblack.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+body {
+  font-size: 14px;
+  line-height: 25px;
+  color: #222222;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300; }
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 1430px; }
+
+header .header-top {
+  border-bottom: 1px solid #ebebeb;
+  min-height: 52px; }
+  header .header-top .conts .cont {
+    display: inline-block;
+    position: relative; }
+    header .header-top .conts .cont:nth-child(1) {
+      margin-right: 40px; }
+    header .header-top .conts .cont a {
+      font-size: 14px;
+      line-height: 30px;
+      color: #222222;
+      font-family: "Rubik", sans-serif;
+      font-weight: 300; }
+      header .header-top .conts .cont a:hover {
+        text-decoration: none;
+        color: #c40316; }
+      header .header-top .conts .cont a:before {
+        content: "";
+        width: 1px;
+        background-color: #ebebeb;
+        position: absolute;
+        display: inline-block;
+        margin-right: 5px;
+        height: 90%;
+        top: 5%;
+        left: -8px; }
+
+header .header-main {
+  padding: 26px 0; }
+  header .header-main .navbar .navbar-toggler-icon {
+    background-image: url(../img/toggler.svg); }
+  header .header-main .navbar .nav-item {
+    margin-right: 1rem; }
+    header .header-main .navbar .nav-item .nav-link {
+      font-size: 14px;
+      line-height: 25px;
+      color: #222222;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative; }
+      header .header-main .navbar .nav-item .nav-link:hover:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2px;
+        background: #222222;
+        bottom: 0;
+        left: 0;
+        width: 100%; }
+  header .header-main .navbar .active .nav-link {
+    font-size: 14px;
+    line-height: 25px;
+    color: #222222;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500; }
+    header .header-main .navbar .active .nav-link:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      background: #222222;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+  header .header-main .header-action div a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border-style: solid;
+    text-align: center;
+    border-width: 2px;
+    border-color: #ebebeb;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    font-size: 16px;
+    line-height: 46px;
+    color: #222222;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400; }
+    header .header-main .header-action div a:hover {
+      font-size: 16px;
+      line-height: 46px;
+      color: #c40316;
+      font-family: "Rubik", sans-serif;
+      font-weight: 300; }
+  header .header-main .header-action div:nth-child(1) {
+    margin-right: 16px; }

@@ -1,0 +1,28 @@
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 1430px;
+}
+
+@mixin flexMedia ($flexBasis: auto) {
+    @media screen and (max-width: 991px) {
+        flex-basis: $flexBasis;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 420px) {
+}

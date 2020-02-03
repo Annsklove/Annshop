@@ -1,0 +1,147 @@
+@mixin mainFont ($size: $fontSizeDef, $lineHt: 25px, $color: $colorGrey, $fWeight: 300) {
+    font-size: $size;
+    line-height: $lineHt;
+    color: $color;
+    font-family: "Rubik", sans-serif;
+    font-weight: $fWeight;
+}
+
+@mixin transition ($trans: 0.3s) {
+    -webkit-transition: all $trans;
+    -o-transition: all $trans;
+    -ms-transition: all $trans;
+    transition: all $trans;
+}
+// ховер на ссылки
+@mixin aHover ($hoverColor: $colorDarkRed) {
+    &:hover {
+        text-decoration: none;
+        @include transition ();
+        color: $hoverColor;
+    }
+}
+// основа для кнопок
+@mixin btnBasis ($btnBgColor, $btnW: auto, $btnH: 52px, $btnFontS: $fontSizeDef, $btnLineH: 52px, $btnBordRad: 4px, $btnColor: $colorWhite) {
+    font-size: $btnFontS;
+    line-height: $btnLineH;
+    border-radius: $btnBordRad;
+    width: $btnW;
+    height: $btnH;
+    background-color: $btnBgColor;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    color: $btnColor;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    @include transition ();
+    &:hover {
+        text-decoration: none;
+        color: $btnColor;
+        background-color: darken($btnBgColor, 5%);
+    }
+    &:active, &:focus, &:active:hover{
+        outline: none;
+        box-shadow: none;
+        text-decoration: none;
+        color: $btnColor;
+        background-color: lighten($btnBgColor, 5%);
+    }
+}
+// иконки в кнопках
+@mixin btnAfter ($afterW, $afterH) {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    width: $afterW;
+    height: $afterH;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: $afterW;
+}
+
+@mixin lineBefore ($bgColor: $colorGrey, $lineH: 2px, $widthLine: 100%) {
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        height: $lineH;
+        background: $bgColor;
+        bottom: 0;
+        left: 0;
+        width: $widthLine;
+    }
+}
+// Кнопки с иконками, круглые лейблы
+@mixin iconBorder ($iconH, $iconW, $brdRad: 50%, $brdW: 1px, $brdColor: inherit, $bgColor: inherit) {
+    display: block;
+    height: $iconH;
+    width: $iconW;
+    position: relative;
+    text-align: center;
+    background-color: $bgColor;
+    @include borderBox ($brdRadius: $brdRad, $brdColor: $brdColor, $brdWidth: $brdW);
+}
+
+@mixin borderBox ($brdColor, $brdWidth: 1px, $brdRadius: 0) {
+    border-radius: $brdRadius;
+    border-style: solid;
+    border-color: $brdColor;
+    border-width: $brdWidth;
+    -webkit-border-radius: $brdRadius;
+    -moz-border-radius: $brdRadius;
+}
+
+@mixin bgImage ($bgHeight: auto) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: $bgHeight;
+}
+
+@mixin pAbsolute ($p-l: auto, $p-r: auto, $p-t: auto, $p-b: auto, $zInd: 10) {
+    position: absolute;
+    left: $p-l;
+    right: $p-r;
+    top: $p-t;
+    bottom: $p-b;
+    z-index: $zInd;
+}
+// Эффекты при фокусе и эктив
+@mixin focusBgOpBr ($opc: none, $bg: none, $brd: none, $clr: inherit) {
+    &:focus, &:active{
+        opacity: $opc;
+        background: $bg;
+        border: $brd;
+        color: $clr;
+    }
+}
+
+// Базовые стили для формы
+@mixin formDefoult ($labelMB: 5px, $inputHeig: 40px) {
+    input{
+        height: $inputHeig;
+    }
+    input::placeholder, textarea::placeholder {
+        @include mainFont ($color: lighten ($colorGrey, 15%), $fWeight: 300);
+    }
+    label {
+        margin-bottom: $labelMB;
+    }
+    .form-control {
+        @include mainFont ();
+        border: 1px solid $colorGreyBrd;
+        border-radius: 0px,
+    }
+    .form-control:focus {
+        border: solid 1px darken($colorGreyBrd, 15%);
+        box-shadow: none;
+    }
+    button {
+        font-size: 12px;
+    }
+}
