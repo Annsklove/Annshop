@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-lg-2 col-md-5 col-sm-6 col-xs-6">
                     <div class="footer-main__wrapper">
-                        <h3 class="footer-main__title-h3">Обслуживание клиентов</h3>
+                        <h3 class="footer-main__title-h3">Обслуживание</h3>
                         <div class="footer-main__menu">
                             <ul>
                                 <li><a href="#">Карта сайта</a></li>

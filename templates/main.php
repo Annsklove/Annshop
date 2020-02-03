@@ -45,13 +45,10 @@
         </div>
 
         <div class="action d-lg-flex justify-content-center d-none">
-            <div class="action__box action__box--active"><a href="#" data-slide="1">New Collection Sport
-                    Clothes For Men’s</a></div>
-            <div class="action__box"><a href="#" data-slide="2">Clear &amp; Modern Minimalist Chair
-                    2019</a></div>
-            <div class="action__box"><a href="#" data-slide="3">Eodem modo vel mattis ante facilisis
-                    nec</a></div>
-            <div class="action__box"><a href="#" data-slide="4">Wooden Minimalist Chair 2019</a></div>
+            <div class="action__box action__box--active"><a href="#" data-slide="1">Новая коллекция вечерних платьев</a></div>
+            <div class="action__box"><a href="#" data-slide="2">Современный Минималистский прибор</a></div>
+            <div class="action__box"><a href="#" data-slide="3">Новая супер акция</a></div>
+            <div class="action__box"><a href="#" data-slide="4">Новая коллекция спортивной одежды</a></div>
         </div>
     </div>
     <!-- slider END -->
