@@ -1,0 +1,37 @@
+.about-section {
+    background-color: $colorWhite;
+}
+
+.about-articles {
+    &__article {
+        background-color: $colorWhite;
+    }
+}
+.article {
+    &__content {
+        padding: 30px;
+    }
+}
+
+.why-choseus {
+    background-image: url(../img/about-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 100px;
+}
+
+.single-block {
+    &__icone-svg {
+        margin-bottom: 20px;;
+        svg {
+            width: 40px;
+        }
+    }
+    &__content {
+        h3 {
+            padding-bottom: 8px;
+        }
+    }
+
+}

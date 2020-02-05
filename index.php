@@ -24,14 +24,12 @@
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    
+
     <!-- Мои стили-->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- icon awesome -->
     <script defer src="fontawesome/all.min.js"></script>
-
-    
 
 </head>
 

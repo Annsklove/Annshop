@@ -98,7 +98,7 @@
                 <div class="col-lg-3 col-md-7 col-sm-12">
                     <div class="footer-main__wrapper">
                         <h3 class="footer-main__title-h3">Контактная информация</h3>
-                        <div class="footer-main__contact">
+                        <address class="footer-main__contact">
                             <div class="d-flex flex-wrap">
                                 <div class="footer-main__contact-icone">
                                     <img src="img/icon/icon-phone.png" alt="">
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <p>Москва. Россия <a href="#">ann@shop.com</a></p>
-                        </div>
+                        </address>
                         <div class="footer-main__social-links">
                             <ul>
                                 <li>

@@ -1337,3 +1337,27 @@ h3 {
 
 .footer-bottom {
   padding: 30px 0; }
+
+.about-section {
+  background-color: #ffffff; }
+
+.about-articles__article {
+  background-color: #ffffff; }
+
+.article__content {
+  padding: 30px; }
+
+.why-choseus {
+  background-image: url(../img/about-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0 100px; }
+
+.single-block__icone-svg {
+  margin-bottom: 20px; }
+  .single-block__icone-svg svg {
+    width: 40px; }
+
+.single-block__content h3 {
+  padding-bottom: 8px; }

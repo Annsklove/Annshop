@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12">
-                    <div class="sidebar-catalog">
+                    <aside class="sidebar-catalog">
                         <div class="sidebar-catalog__box">
                             <h3 class="sidebar-catalog__title">
                                 Категории товаров
@@ -21,7 +21,7 @@
                                 Фильтр по цене
                             </h3>
                         </div>
-                    </div>
+                    </aside>
                 </div>
                 <div class="col-lg-9 col-md-12">
                     <div class="promo-banners mb-4">
