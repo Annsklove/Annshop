@@ -66,7 +66,7 @@
                                     <form action="">
                                         <div class="form-group">
                                             <label for="">Ваше Имя:</label>
-                                            <input type="text" class="form-control" placeholder="Введите Имя..">
+                                            <input autofocus type="text" class="form-control" placeholder="Введите Имя..">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Ваш email:</label>
@@ -75,6 +75,9 @@
                                         <div class="form-group">
                                             <label for="">Сообщение:</label>
                                             <textarea class="form-control" name="" id="" cols="20" rows="5" placeholder="Ваше сообщение.."></textarea>
+                                        </div>
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btnGrey">Submit</button>
                                         </div>
                                     </form>
                                 </div>

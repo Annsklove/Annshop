@@ -2,7 +2,7 @@
 .footer-letter-us {
     &__box {
         margin-top: -73px;
-        padding: 45px 35px;
+        padding: 45px 20px;
         background: $colorWhite;
         @include borderBox ($brdColor: $colorLightGrey);
     }
