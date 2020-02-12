@@ -1,0 +1,30 @@
+.contact-section {
+    background-color: $colorWhite;
+    padding: 20px;
+    h3 {
+        @include mainFont ($size: 21px, $lineHt: 20px, $color: $colorGrey, $fWeight: 500);
+        margin-bottom: 25px;
+    }
+}
+
+.contact-us {
+    &__about {
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    &__contact-data {
+        .data-single {
+            padding: 13px 0;
+            border-top: 1px solid $colorLightGrey;
+        }
+        span {
+            margin-left: 10px;
+        }
+    }
+}
+
+.contact-form {
+    label {
+        font-weight: 500;
+    }
+}

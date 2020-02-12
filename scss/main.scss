@@ -55,22 +55,27 @@ h3 {
     }
 }
 
+*::selection {
+    background: #fff6dc;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.input-group {
+
     .form-control {
         border: solid 1px $colorLightGrey;
         height: 52px;
         @include mainFont ($fWeight: 300);
+
         &::placeholder {
             color: liten($colorGrey, 15%);
         }
+
         &:focus {
             box-shadow: none;
-            border-color: darken($colorLightGrey, $amount: 6%);
+            border-color: darken($colorBorderGrey, $amount: 6%);
         }
     }
-}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .grey_section {

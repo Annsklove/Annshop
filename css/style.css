@@ -243,8 +243,14 @@ h3 {
     color: #ffffff;
     border-color: #c40316; }
 
+*::-moz-selection {
+  background: #fff6dc; }
+
+*::selection {
+  background: #fff6dc; }
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.input-group .form-control {
+.form-control {
   border: solid 1px #ebebeb;
   height: 52px;
   font-size: 14px;
@@ -252,18 +258,18 @@ h3 {
   color: #333;
   font-family: "Rubik", sans-serif;
   font-weight: 300; }
-  .input-group .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder {
     color: liten(#333, 15%); }
-  .input-group .form-control:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder {
     color: liten(#333, 15%); }
-  .input-group .form-control::-ms-input-placeholder {
+  .form-control::-ms-input-placeholder {
     color: liten(#333, 15%); }
-  .input-group .form-control::placeholder {
+  .form-control::placeholder {
     color: liten(#333, 15%); }
-  .input-group .form-control:focus {
+  .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: gainsboro; }
+    border-color: #979797; }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .grey_section {
@@ -1361,3 +1367,28 @@ h3 {
 
 .single-block__content h3 {
   padding-bottom: 8px; }
+
+.contact-section {
+  background-color: #ffffff;
+  padding: 20px; }
+  .contact-section h3 {
+    font-size: 21px;
+    line-height: 20px;
+    color: #333;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    margin-bottom: 25px; }
+
+.contact-us__about {
+  line-height: 24px;
+  margin-bottom: 20px; }
+
+.contact-us__contact-data .data-single {
+  padding: 13px 0;
+  border-top: 1px solid #ebebeb; }
+
+.contact-us__contact-data span {
+  margin-left: 10px; }
+
+.contact-form label {
+  font-weight: 500; }
