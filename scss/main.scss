@@ -108,11 +108,31 @@ h3 {
         outline: none;
         @include bgImage ($bgHeight: 510px);
     }
+    video {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        // height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+    }
+    @media screen and (max-width: 991px) {
+        video {
+            width: auto;
+            object-fit: contain;
+            object-position: center center;
+            right: 0;
+            left: auto;
+        }
+    }
     &--one {
-        background-image: url(../img/slider17.jpg);
+        background-image: url(../img/video-sm-bg.JPG);
     }
     &--two {
-        background-image: url(../img/slider18.jpg);
+        background-image: url(../img/slider17.jpg);
     }
     &--three {
         background-image: url(../img/slider9.jpg);
@@ -122,11 +142,13 @@ h3 {
     }
 
     &__content {
+        z-index: 99;
         h3 {
             @include mainFont ($lineHt: 22px, $color: $colorDarkRed, $fWeight: 500);
         }
         h1{
             @include mainFont ($lineHt: 42px, $size: $fontSize--h1);
+            text-shadow: 1px 1px 1px #9f9f9f;
             text-transform: capitalize;
         }
         p {

@@ -56,6 +56,8 @@
                 // если отсутствыет параметр page - выводится главная страница
             } elseif ($page == 'shop') {
             } elseif ($page == 'product') {
+            } elseif ($page == 'about') {
+            } elseif ($page == 'contact') {
             }
 
             // Из массива GET с параметром 'page' page кладем в переменную $page значение
@@ -64,9 +66,17 @@
             if (!isset($page)) {
                 // если отсутствыет параметр page
                 require('templates/main.php');
-            } elseif ($page == 'shop') {
+            } 
+            elseif ($page == 'shop') {
                 require('templates/shop.php');
-            } elseif ($page == 'product') {
+            } 
+            elseif ($page == 'about') {
+                require('templates/about.php');
+            }
+            elseif ($page == 'contact') {
+                require('templates/contact.php');
+            }
+            elseif ($page == 'product') {
                 // Получаем id gпродукта, который есть в URL (из массива GET) и заносим его в переменную $id
                 $id = $_GET['id'];
                 // Создаем пустой массив $good, в нем будет хранится товар для отображения на странице
