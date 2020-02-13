@@ -5,7 +5,8 @@
     <div class="slick mb-site">
         <div class="slider slider-for mb-0">
             <div class="slick__slide slick--one d-flex align-items-center">
-                <div class="container slick__content">
+            <video src="video/bg-video.mp4" muted autoplay loop ></video>
+                <div class="container slick__content slick__content--whiteText">
                     <h3>новая коллекция</h3>
                     <h1>новая коллекция <br> спортивной одежды</h1>
                     <p>скидка <span> 30%</span> на этой неделе</p>

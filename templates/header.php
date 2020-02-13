@@ -13,7 +13,7 @@
         <div class="header-main d-flex justify-content-between">
             <div class="col-lg-2 col-md-10 col-xs-10 p-0">
                 <a class="navbar-brand" href="/">
-                    <img class="img-fluid" src="img/logo.png" alt="logo">
+                    <img class="img-fluid" src="img/logo-annshop.png" alt="logo">
                 </a>
             </div>
             <div class="col-lg-10 col-md-2 col-xs-2 p-0">
@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="index.php?page=shop">Каталог</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.php">О нас</a>
+                                <a class="nav-link" href="index.php?page=about">О нас</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Оплата</a>
@@ -54,7 +54,7 @@
                                 <a class="nav-link" href="#">Акции</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Контакты</a>
+                                <a class="nav-link" href="index.php?page=contact">Контакты</a>
                             </li>
                         </ul>
 
